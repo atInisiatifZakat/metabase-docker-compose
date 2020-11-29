@@ -9,5 +9,5 @@ services:
     env_file:
       - ./config/metabase.env
     ports:
-      - 3000:3000
+      - 7001:3000
     network_mode: host

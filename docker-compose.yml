@@ -1,13 +1,13 @@
 version: "3"
 
 services:
-  metabase:
-    restart: "always"
-    image: "metabase/metabase"
+  app:
+    restart: always
+    image: metabase/metabase
     volumes:
       - ./data/metabase:/metabase-data
     env_file:
       - ./config/metabase.env
     ports:
-      - '3000:3000'
-    network_mode: "host"
+      - 3000:3000
+    network_mode: host

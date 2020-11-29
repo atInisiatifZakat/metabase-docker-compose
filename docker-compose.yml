@@ -5,6 +5,8 @@ services:
     container_name: "metabase"
     restart: "always"
     image: "metabase/metabase"
+    volumes:
+      - ./data:/metabase-data
     env_file:
       - ./config/metabase.env
     ports:

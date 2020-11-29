@@ -2,11 +2,10 @@ version: "3"
 
 services:
   metabase:
-    container_name: "metabase"
     restart: "always"
     image: "metabase/metabase"
     volumes:
-      - ./data:/metabase-data
+      - ./data/metabase:/metabase-data
     env_file:
       - ./config/metabase.env
     ports:
